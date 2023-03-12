@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:nutriv/cal.dart';
  
 void main() => runApp(const MyApp());
  
@@ -16,7 +17,8 @@ class MyApp extends StatelessWidget {
       ),
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        appBar: AppBar(title: const Text(_title), backgroundColor:  Color.fromARGB(255, 107, 33, 243),),
+        appBar: AppBar(title: const Text(_title),
+        backgroundColor:  Color.fromARGB(255, 107, 33, 243),),
         body: const MyStatefulWidget(),
       ),
     );
@@ -92,17 +94,17 @@ class _MyStatefulWidgetState extends State<MyStatefulWidget> {
                   child: const Text('Login'),
                   // style: ButtonStyle(backgroundColor:colors.purple ,),
                   onPressed: () {
-                    print(nameController.text);
-                    print(passwordController.text);
+                    Navigator.push(context,MaterialPageRoute(builder: (context) => const Cal()),
+  );
                   },
                 )
             ),
             Row(
               children: <Widget>[
-                const Text('Does not have account?'),
+                const Text('Don\'t have an account?'),
                 TextButton(
                   child: const Text(
-                    'Sign in',
+                    'Sign up here!',
                     style: TextStyle(fontSize: 20),
                   ),
                   onPressed: () {
