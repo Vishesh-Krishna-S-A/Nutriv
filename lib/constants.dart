@@ -27,8 +27,8 @@ const kTitleTextStyle = TextStyle(
 
 const kResultTextStyle = TextStyle(
   color: Color(0xFF24D876),
-  fontSize: 22.0,
-  fontWeight: FontWeight.bold,
+  fontSize:25.0,
+  fontWeight: FontWeight.w300,
 );
 
 const kBMITextStyle = TextStyle(

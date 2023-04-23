@@ -6,10 +6,9 @@ import 'package:nutriv/components/bottom_button.dart';
 class ResultsPage extends StatelessWidget {
   const ResultsPage(
       {super.key, required this.interpretation,
-      required this.bmiResult,
       required this.resultText});
 
-  final String bmiResult;
+  // final String bmiResult;
   final String resultText;
   final String interpretation;
 
@@ -42,14 +41,17 @@ class ResultsPage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
-                  Text(
-                    resultText.toUpperCase(),
-                    style: kResultTextStyle,
+                  Padding(
+                    padding: const EdgeInsets.all(45.0),
+                    child: Text(
+                      resultText,
+                      style: kResultTextStyle,
+                    ),
                   ),
-                  Text(
-                    bmiResult,
-                    style: kBMITextStyle,
-                  ),
+                  // Text(
+                  //   bmiResult,
+                  //   style: kBMITextStyle,
+                  // ),
                   Text(
                     interpretation,
                     textAlign: TextAlign.center,

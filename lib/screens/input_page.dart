@@ -27,6 +27,7 @@ class _InputPageState extends State<InputPage> {
   int height = 180;
   int weight = 60;
   int age = 20;
+  int check=0;
 
   @override
   Widget build(BuildContext context) {
@@ -44,6 +45,7 @@ class _InputPageState extends State<InputPage> {
               Expanded(
                 child: ReusableCard(
                   onPress: () {
+                    check=1;
                     setState(() {
                       selectedGender = Gender.male;
                     });
@@ -62,6 +64,7 @@ class _InputPageState extends State<InputPage> {
                   onPress: () {
                     setState(() {
                       selectedGender = Gender.female;
+                      check=2;
                     });
                   },
                   colour: selectedGender == Gender.female
@@ -104,8 +107,8 @@ class _InputPageState extends State<InputPage> {
                     data: SliderTheme.of(context).copyWith(
                       inactiveTrackColor: const Color(0xFF8D8E98),
                       activeTrackColor: Colors.white,
-                      thumbColor: Color.fromARGB(255, 171, 21, 235),
-                      overlayColor: Color.fromARGB(41, 149, 21, 235),
+                      thumbColor: const Color.fromARGB(255, 171, 21, 235),
+                      overlayColor: const Color.fromARGB(41, 149, 21, 235),
                       thumbShape:
                           const RoundSliderThumbShape(enabledThumbRadius: 15.0),
                       overlayShape:
@@ -220,13 +223,13 @@ class _InputPageState extends State<InputPage> {
             buttonTitle: 'CALCULATE',
             onTap: () {
               CalculatorBrain calc =
-                  CalculatorBrain(height: height, weight: weight);
+                  CalculatorBrain(height: height, weight: weight, age:age, check:check);
 
               Navigator.push(
                 context,
                 MaterialPageRoute(
                   builder: (context) => ResultsPage(
-                        bmiResult: calc.calculateBMI(),
+                        // bmiResult: calc.calculateBMI(),
                         resultText: calc.getResult(),
                         interpretation: calc.getInterpretation(),
                       ),
