@@ -13,7 +13,7 @@ class CalculatorBrain {
   final int age;
   final int check;
 
-  double _calo;
+  double _calo=0;
 
   Void? calculateBMI() {
     if (check == 1) {
