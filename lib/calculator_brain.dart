@@ -15,7 +15,7 @@ class CalculatorBrain {
 
   double _calo=100;
 
-  getCal(){
+  getCalo(){
     return _calo;
   }
 
