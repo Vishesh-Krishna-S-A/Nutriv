@@ -1,9 +1,19 @@
-import 'package:flutter/material.dart';
+import 'dart:html';
 
-const kBottomContainerHeight = 80.0;
+import 'package:flutter/material.dart';
+import 'package:nutriv/login.dart';
+import 'package:nutriv/screens/diet.dart';
+import 'package:nutriv/screens/input_page.dart';
+
+const kBottomContainerHeight = 60.0;
 const kActiveCardColour = Color(0xFF1D1E33);
 const kInactiveCardColour = Color(0xFF111328);
 const kBottomContainerColour = Color.fromARGB(255, 117, 21, 235);
+final Screen=[
+  Login(),
+  DietPage(),
+  InputPage(),
+];
 
 const kLabelTextStyle = TextStyle(
   fontSize: 18.0,
@@ -26,7 +36,7 @@ const kTitleTextStyle = TextStyle(
 );
 
 const kResultTextStyle = TextStyle(
-  color: Color(0xFF24D876),
+  color: Color.fromARGB(255, 254, 255, 255),
   fontSize:25.0,
   fontWeight: FontWeight.w300,
 );

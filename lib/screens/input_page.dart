@@ -7,7 +7,8 @@ import 'package:nutriv/components/round_icon_button.dart';
 import 'package:nutriv/constants.dart';
 import 'results_page.dart';
 import 'package:nutriv/calculator_brain.dart';
-
+import 'package:google_nav_bar/google_nav_bar.dart';
+import 'package:nutriv/screens/diet.dart';
 
 enum Gender {
   male,
@@ -28,6 +29,8 @@ class _InputPageState extends State<InputPage> {
   int weight = 60;
   int age = 20;
   int check=0;
+  int _selectedIndex = 0;
+  
 
   @override
   Widget build(BuildContext context) {
@@ -221,9 +224,10 @@ class _InputPageState extends State<InputPage> {
           ),
           BottomButton(
             buttonTitle: 'CALCULATE',
-            onTap: () {
+            onTap: () async {
               CalculatorBrain calc =
                   CalculatorBrain(height: height, weight: weight, age:age, check:check);
+                  calc.calculateBMI();
 
               Navigator.push(
                 context,
@@ -239,6 +243,30 @@ class _InputPageState extends State<InputPage> {
           ),
         ],
       ),
+      // bottomNavigationBar: GNav(
+      //   backgroundColor: kInactiveCardColour,
+      //   tabBackgroundColor: kActiveCardColour,
+      //   tabs: const [
+      //     GButton(
+      //       icon: Icons.home,
+      //       text: 'Home',
+      //     ),
+      //     GButton(
+      //       icon: Icons.fastfood_outlined,
+      //       text: 'Diet',
+      //       ),
+      //     GButton(
+      //       icon: Icons.calculate_outlined,
+      //       text: 'Calculate',
+      //       ),
+      //   ],
+      //  selectedIndex: _selectedIndex,
+      //  onTabChange: (index) {
+      //           setState(() {
+      //             _selectedIndex = index;
+      //           });
+      //         },
+      // ),
     );
   }
 }

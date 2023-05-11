@@ -6,14 +6,14 @@ class CalculatorBrain {
       {required this.height,
       required this.weight,
       required this.age,
-      required this.check,});
+      required this.check});
 
   final int height;
   final int weight;
   final int age;
   final int check;
 
-  double _calo=0;
+  double _calo=100;
 
   Void? calculateBMI() {
     if (check == 1) {
@@ -36,7 +36,7 @@ class CalculatorBrain {
   }
 
   String getInterpretation() {
-    return 'ye';
+    return '';
     // if (_bmi >= 25) {
     //   return 'You have a higher than normal body weight. Try to exercise more.';
     // } else if (_bmi >= 18.5) {
