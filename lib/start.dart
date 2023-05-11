@@ -13,7 +13,7 @@ class startPage extends StatefulWidget {
 
 class _startPageState extends State<startPage> {
   
-  int _selectedIndex = 0;
+  int _selectedIndex = 2;
 
   @override
 
