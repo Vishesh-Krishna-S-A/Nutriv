@@ -15,6 +15,10 @@ class CalculatorBrain {
 
   double _calo=100;
 
+  getCal(){
+    return _calo;
+  }
+
   Void? calculateBMI() {
     if (check == 1) {
       _calo = (10 * weight) + (6.25 * height) - (5 * age) + 5;

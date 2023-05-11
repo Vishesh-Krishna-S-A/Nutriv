@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:nutriv/login.dart';
 
 class SignupPage extends StatelessWidget {
   const SignupPage({super.key});
@@ -98,7 +99,10 @@ class SignupPage extends StatelessWidget {
                       child: MaterialButton(
                         minWidth: double.infinity,
                         height: 60,
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => const Login()));
+                        },
                         color: Colors.blueAccent,
                         shape: RoundedRectangleBorder(
                             borderRadius: BorderRadius.circular(40)),

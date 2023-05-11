@@ -15,10 +15,20 @@ class Home extends StatelessWidget {
         centerTitle: true,
       ),
       body: Column(
-        children: [
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: const [
           Image(
             image: AssetImage('assets/nutriv.png')
           ),
+          Padding(
+            padding: EdgeInsets.only(bottom:20.0, left: 50.0, right: 20.0),
+            child: Text('about nutriv about nutriv about nutriv about nutriv about nutriv about nutriv about nutriv about nutriv about nutriv about nutriv about nutriv about nutriv',
+            style: TextStyle(
+              fontSize: 28.0,
+
+            ),
+            ),
+          )
         ],
       ),
     );
