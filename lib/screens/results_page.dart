@@ -42,7 +42,7 @@ class ResultsPage extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: <Widget>[
                   Padding(
-                    padding: const EdgeInsets.all(35.0),
+                    padding: const EdgeInsets.all(25.0),
                     child: Text(
                       resultText,
                       style: kResultTextStyle,

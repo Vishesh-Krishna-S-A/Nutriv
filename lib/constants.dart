@@ -1,16 +1,17 @@
-import 'dart:html';
+// import 'dart:html';
 
 import 'package:flutter/material.dart';
 import 'package:nutriv/login.dart';
 import 'package:nutriv/screens/diet.dart';
 import 'package:nutriv/screens/input_page.dart';
+import 'package:nutriv/screens/home.dart';
 
 const kBottomContainerHeight = 60.0;
 const kActiveCardColour = Color(0xFF1D1E33);
 const kInactiveCardColour = Color(0xFF111328);
 const kBottomContainerColour = Color.fromARGB(255, 117, 21, 235);
 final Screen=[
-  Login(),
+  Home(),
   DietPage(),
   InputPage(),
 ];

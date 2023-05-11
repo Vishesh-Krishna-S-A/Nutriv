@@ -1,8 +1,9 @@
-import 'dart:html';
+// import 'dart:html';
 import 'package:flutter/material.dart';
 import 'package:nutriv/screens/input_page.dart';
 import 'package:nutriv/constants.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
+import 'package:nutriv/screens/home.dart';
 
 class startPage extends StatefulWidget {
   const startPage({super.key});

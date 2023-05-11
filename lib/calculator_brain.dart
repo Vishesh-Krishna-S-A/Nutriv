@@ -31,7 +31,9 @@ class CalculatorBrain {
     double calo2 = _calo + 415;
     double calo3 = _calo + 590;
     double calo4 = _calo + 790;
-    String result ='Required calories with moderate excercise to lose weight: $calo1 to $calo2 Kcal \n\n Required calories with moderate excercise to lose weight: $calo3 to $calo4 Kcal';
+    double calo5 = _calo + 960;
+    double calo6 = _calo + 1160;
+    String result ='Required calories with moderate excercise to: \n\nLose weight: $calo1 to $calo2 Kcal \n\nMaintain weight: $calo3 to $calo4 Kcal \n\nGain weight: $calo5 to $calo6 Kcal';
     return result;
   }
 
